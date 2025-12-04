@@ -1,0 +1,58 @@
+# ------------------------------
+# PYTHON CACHE & TEMP FILES
+# ------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# ------------------------------
+# MODEL FILES (LARGE)
+# Uncomment if you don't want to track .pkl models
+# models/*.pkl
+# *.pkl
+
+# ------------------------------
+# STREAMLIT, ENV, CONFIG
+# ------------------------------
+.env
+.venv/
+*.env
+*/.streamlit/*
+.streamlit/*
+
+# ------------------------------
+# NOTEBOOK CHECKPOINTS
+# ------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ------------------------------
+# DATA FILES
+# WARNING: Avoid pushing large or sensitive datasets
+# ------------------------------
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# ------------------------------
+# OS-SPECIFIC FILES
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# LOGS
+# ------------------------------
+*.log
+
+# ------------------------------
+# REPORTS / TEMP EXPORTS
+# ------------------------------
+*.pdf
+*.docx
+reports/*
+exports/*
+outputs/*
