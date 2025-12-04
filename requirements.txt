@@ -26,3 +26,6 @@ plotly==5.18.0
 
 # Fixes protobuf issues with Streamlit
 protobuf==4.25.1
+
+pymupdf==1.23.5
+
