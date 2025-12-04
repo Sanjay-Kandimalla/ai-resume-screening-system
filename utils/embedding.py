@@ -8,15 +8,15 @@ from sentence_transformers.util import cos_sim
 # Load LOCAL SBERT MODEL from /models/
 # ------------------------------------------
 
-# Path: utils/ → go up to project root
+# Path: utils/ → go to project root
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 
-# Full path to model folder
+# Full local SBERT model path
 MODEL_PATH = os.path.join(ROOT_DIR, "models", "all-MiniLM-L6-v2")
 
-# Load local SBERT model
-bert_model = SentenceTransformer(MODEL_PATH)
+# Load from local folder (NO HF DOWNLOAD)
+bert_model = SentenceTransformer(MODEL_PATH, device="cpu")
 
 
 def get_embedding(text):
