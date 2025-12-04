@@ -15,13 +15,13 @@ import joblib, re, nltk
 import numpy as np
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import plotly.graph_objects as go
 
 # === Custom Utility Imports ===
 from utils.parser import extract_text_from_upload, extract_contact_details, extract_experience_years, extract_education_level
 from utils.skills import extract_skills
+from utils.embedding import bert_model
 from utils.embedding import compute_bert_similarity
 from utils.scoring import score_experience, score_education, final_ats_score
 from utils.report import create_ats_report
@@ -38,8 +38,7 @@ if "uploader_key" not in st.session_state:
 def load_models():
     tfidf = joblib.load("models/tfidf_vectorizer.pkl")
     hybrid_model = joblib.load("models/resume_hybrid_model.pkl")  # NEW
-    bert = SentenceTransformer("all-MiniLM-L6-v2")                # NEW
-    return tfidf, hybrid_model, bert
+    return tfidf, hybrid_model, bert_model
 
 tfidf, hybrid_model, bert_model = load_models()
 
